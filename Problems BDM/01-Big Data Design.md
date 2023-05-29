@@ -35,4 +35,4 @@
 2. Consider the following conceptual schema and propose several design alternatives to translate it to a logical representation (e.g., using JSON notation). Then, explain which is the best alternative and why.
  
     
-    ![Untitled](01-Big%20Data%20Design%20a287876e227f441b82ebfe4be238dc96/Untitled.png)
+    ![Untitled](01-Big%20Data%20Design/Untitled.png)

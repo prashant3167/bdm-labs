@@ -10,7 +10,7 @@
 
 1. Consider the following implementation of the Cartesian Product with MapReduce ($\oplus$ stands for concatenation) and answer the questions accordingly.
     
-    ![Untitled](07-Distributed%20Processing%20Frameworks%2085a743c106024d5ab409529bea77ab81/Untitled.png)
+    ![Untitled](07-Distributed%20Processing%20Frameworks/Untitled.png)
     
     1. Which is the relationship of *D* with parallelism and scalability, if any?
     2. Which is the optimal value for *D*?
@@ -389,7 +389,7 @@
     
 9. Consider three files relating to a bibliographic database: author.csv relates authors with papers (you may assume that author names are unique, that authors have one or more papers, and that papers have one or more authors); title.csv gives the title of a paper (you may assume a paper has one title, but one title may be shared by many papers); and citation.csv indicates which papers cite which other papers (you may assume that each paper cites at least one other paper, that a paper may be cited zero or more times, and that a paper cannot cite itself).
     
-    ![Untitled](07-Distributed%20Processing%20Frameworks%2085a743c106024d5ab409529bea77ab81/Untitled%201.png)
+    ![Untitled](07-Distributed%20Processing%20Frameworks/Untitled%201.png)
     
     The headers are shown for illustration here. They do not need to be considered.
     

@@ -9,13 +9,13 @@
 
 1. Let’s assume we have a *Consistent hash* with *D* = 16, and the hash function is simply the module of the IP address or the key, and suppose the current state of the consistent hash is (position in the $ring:key|key|...$):
     
-    ![Untitled](04-Key-Value%20Stores%202902c48a252e43da87cbc65e0f15146f/Untitled.png)
+    ![Untitled](04-Key-Value%20Stores/Untitled.png)
     
     1. What happens when we insert objects 30 and 58? Draw the result.
     2. What happens in the structure when we register a new server with IP address 37? Draw the result.
 2. Let’s suppose we have a *Linear Hash* and the hash function is simply the module of the key, the capacity of a bucket is only four entries, and current state of the linear hash is $(bucketID: key|key|...)$:
     
-    ![Untitled](04-Key-Value%20Stores%202902c48a252e43da87cbc65e0f15146f/Untitled%201.png)
+    ![Untitled](04-Key-Value%20Stores/Untitled%201.png)
     
     a) What happens in the structure when we insert keys 14, 27, 37, and 44? Draw the result.
     
@@ -33,7 +33,7 @@
     - Index:
 4. Briefly explain what is wrong in this linear hash structure, or if you think it is right, explicitly say so. 
     
-    ![Untitled](04-Key-Value%20Stores%202902c48a252e43da87cbc65e0f15146f/Untitled%202.png)
+    ![Untitled](04-Key-Value%20Stores/Untitled%202.png)
     
 5. Suppose you have a hash function whose range has size 100 (i.e., D=100), and a Consistent Hash structure with 5 machines (M1...5) whose identifiers map to values *h*(*M*1) = 0, *h*(*M*2) = 20, *h*(*M*3) = 40, *h*(*M*4) = 60, *h*(*M*5) = 80. What happens if you have an object mapped to value *h*(*O*) = 90?
 6. Given an empty **Consistent Hash** with *h*(*x*) = *x*%32 (i.e., we directly take module 32 to both the keys and the bucket IDs), and unlimited capacity in each bucket, consider you have a cluster of four machines with IDs 19, 22, 75, 92, and draw the result of inserting the following keys in the given order: 12, 4, 10, 49, 42, 60, 63, 53, 47, 27, 26, 28, 13, 52.

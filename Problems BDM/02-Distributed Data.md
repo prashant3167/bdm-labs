@@ -4,7 +4,7 @@
 
 1. Which kind of database is this according to the distribution of data?
     
-    ![02-Distributed%20Data%20487ea8a58918455b9a7cfb02bd047a96/image1.jpeg](02-Distributed%20Data%20487ea8a58918455b9a7cfb02bd047a96/image1.jpeg)
+    ![02-Distributed%20Data/image1.jpeg](02-Distributed%20Data/image1.jpeg)
     
 2. Explain what is (a) a distributed system, and (b) a parallel system. Compare both of them (i.e., what has one and not the other and vice-versa).
 3. Which two kinds of schema information contains the Global Conceptual Schema that does not contain the Local Conceptual Schema in the Extended ANSI-SPARC Architecture for DDBMS?
@@ -47,7 +47,7 @@
     
     **Fragments**
     
-    ![Untitled](02-Distributed%20Data%20487ea8a58918455b9a7cfb02bd047a96/Untitled.png)
+    ![Untitled](02-Distributed%20Data/Untitled.png)
     
 2.  You are a customer using an e-commerce based on heavy replication (e.g., Amazon):
     1. Show a database replication strategy (e.g., sketch it) where:
@@ -63,7 +63,7 @@
         
 3. Consider the following architectures and answer the questions:
     
-    ![Figure 1: Centralized architecture](02-Distributed%20Data%20487ea8a58918455b9a7cfb02bd047a96/image2.png)
+    ![Figure 1: Centralized architecture](02-Distributed%20Data/image2.png)
     
     Figure 1: Centralized architecture
     
@@ -73,7 +73,7 @@
     1. How long would it take (i.e., response time) to read 1TB with sequential access (Figure 1)? (in secs)
     2. How long would a single random access (i.e., reading one tuple, of for example 100 bytes, through an index) take (i.e., response time), assuming we already have the physical address? (in secs)
         
-        ![Figure 2: Shared-memory architecture](02-Distributed%20Data%20487ea8a58918455b9a7cfb02bd047a96/image3.png)
+        ![Figure 2: Shared-memory architecture](02-Distributed%20Data/image3.png)
         
         Figure 2: Shared-memory architecture
         
@@ -83,7 +83,7 @@
     3. How long would it take (i.e., response time) to read 1TB with parallel access (Figure 2)? Assume 100 disks (i.e., 100 replicas of the whole data) on the same machine with shared-memory and infinite CPU capacity.
     4. How long would a single random access (i.e., reading one tuple, of 100 bytes, through an index) take (i.e., response time), assuming we already have the physical address? (in secs)
         
-        ![Figure 3: Shared-nothing architecture](02-Distributed%20Data%20487ea8a58918455b9a7cfb02bd047a96/image4.png)
+        ![Figure 3: Shared-nothing architecture](02-Distributed%20Data/image4.png)
         
         Figure 3: Shared-nothing architecture
         
@@ -124,9 +124,9 @@
     S2: A2 = AssignedTo(#emp > ’E3’)
     ```
     
-    ![02-Distributed%20Data%20487ea8a58918455b9a7cfb02bd047a96/image5.png](02-Distributed%20Data%20487ea8a58918455b9a7cfb02bd047a96/image5.png)
+    ![02-Distributed%20Data/image5.png](02-Distributed%20Data/image5.png)
     
-    ![02-Distributed%20Data%20487ea8a58918455b9a7cfb02bd047a96/image6.png](02-Distributed%20Data%20487ea8a58918455b9a7cfb02bd047a96/image6.png)
+    ![02-Distributed%20Data/image6.png](02-Distributed%20Data/image6.png)
     
     Figure 4: Distributed Access Plans
     
@@ -140,11 +140,11 @@
     - Each fragment is replicated at all sites.
     - We have the following query:
         
-        ![Untitled](02-Distributed%20Data%20487ea8a58918455b9a7cfb02bd047a96/Untitled%201.png)
+        ![Untitled](02-Distributed%20Data/Untitled%201.png)
         
     
     ⇒ Process tree of the query:
     
-    ![02-Distributed%20Data%20487ea8a58918455b9a7cfb02bd047a96/image7.jpeg](02-Distributed%20Data%20487ea8a58918455b9a7cfb02bd047a96/image7.jpeg)
+    ![02-Distributed%20Data/image7.jpeg](02-Distributed%20Data/image7.jpeg)
     
 6. Consider a left-deep process tree corresponding to a query, where each internal node is a join, and every leaf a data source (e.g., relational table). Knowing that the tree contains 9 nodes (including leaves), the system has as much parallelism capacity as needed to run all the joins in pipelining mode (no other kind of parallelism is available), which is the occupancy if the overall cost of the serial query is 4 seconds? Explicit any assumption you need to make.
