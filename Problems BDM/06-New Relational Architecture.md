@@ -58,10 +58,27 @@
 
 4. Without considering compression and assuming a disk block size of 8KB, is there any case where a query retrieving all tuples, but only half of the equally-sized attributes of a relational table performs better in **row storage** without any kind of vertical partitioning than in columnar storage? Numerically justify your answer.
 
+
+
 5. Represent the given column with dictionary and run-length encoding storing end row position.
     
     ![Untitled](06-New%20Relational%20Architecture/Untitled.png)
+
+    Dictionary: A, B, C
+    
+    End Row: 1, 4, 5, 7 (Assuming that the rows are stored in the form of 0-index)
+    
+    Code: 1, 2, 3, 1
+
     
 6. Given the two columns of a table represented with run-length encoding using dictionary, give the position of the row(s) that fulfill the predicate ”Charlie AND Beta”. Briefly explain how a column store would obtain them.
     
     ![Untitled](06-New%20Relational%20Architecture/Untitled%201.png)
+
+    Column 1 – Bravo, Bravo, NULL, NULL, NULL, Charlie, Charlie, Charlie
+    Column 2 – Alpha, NULL, NULL, NULL, NULL, NULL, Beta, Beta
+    
+    Row Positions obtained in query predicate: 6 and 7.
+    
+    Explanation – A columnar store database will first convert the number of values stored to rows ending positions, thus we will get [1, 4, 7] and [0, 5, 7] for columns 1 and 2 respectively. Then, checking for predicate Charlie (in the range of 5-7) and Beta (in the range of (6-7) => ANDing gets us rows 6-7, which is our required answer.
+
