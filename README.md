@@ -21,7 +21,7 @@
 
 ## How to Contribute?
 
-In any section, if you would like to share your solution that you are sure about put next to it [![CDNJS](https://img.shields.io/badge/status-approved-brightgreen)](#) badge otherwise if you've doubts about your solution put [![CDNJS](https://img.shields.io/badge/status-review--pending-orange)](#) badge for others to review. Finally, drop a pull request.
+Please drop a pull request if you have a solution to any of the unresolved problem. Every level of contribution is welcome.
 
 ### Too much effort?
 If you think that's too much effort and would like to share a pdf of your notes, please DM me directly that would still be a huge contribution.
