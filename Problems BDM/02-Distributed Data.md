@@ -2,31 +2,37 @@
 
 ## 2.1 Theoretical questions
 
-1. Which kind of database is this according to the distribution of data?
+1. Which kind of database is this according to the distribution of data? 
     
     ![02-Distributed%20Data/image1.jpeg](02-Distributed%20Data/image1.jpeg)
     
+    
+    **Centralized**
+    
 2. Explain what is (a) a distributed system, and (b) a parallel system. Compare both of them (i.e., what has one and not the other and vice-versa).
-3. Which two kinds of schema information contains the Global Conceptual Schema that does not contain the Local Conceptual Schema in the Extended ANSI-SPARC Architecture for DDBMS?
-    1. —
-    2. —
-4. In the context of distributed data management, name the **four big challenges** that need to be carefully considered in the presence of distribution from the tenant/user point of view.
+
+**distributed system contain multiple nodes (communicate through a network), parallel can be in one machine**
+
+4. Which two kinds of schema information contains the Global Conceptual Schema that does not contain the Local Conceptual Schema in the Extended ANSI-SPARC Architecture for DDBMS?
+    1. **Fragmentation**
+    2. **Allocation**
+5. In the context of distributed data management, name the **four big challenges** that need to be carefully considered in the presence of distribution from the tenant/user point of view.
     1. **Data Design**
     2. **Catalogue Management**
     3. **Transaction Management**
     4. **Query Processing**
-5. Name the three characteristics of fragmentation that make it correct.
-    1. —
-    2. —
-    3. —
-6. Which is the main problem in having replicas, and which is the innovation introduced by some NOSQL tools to solve it.
+6. Name the three characteristics of fragmentation that make it correct.
+    1. **Complete**
+    2. **Disjoint**
+    3. **Reconstruct**
+7. Which is the main problem in having replicas, and which is the innovation introduced by some NOSQL tools to solve it.
     - Problem:
     - Innovation:
-7. Given *N* replicas, let’s call *R* the *ReadConcern* parameter of MongoDB and *W* the *WriteConcern* (which indicate respectively the number of copies it reads and writes, before confirming the operation to the user); give the equation involving those variables that corresponds to the **eventually consistent** configuration.
-8. What is the difference between query cost and query response time ...
+8. Given *N* replicas, let’s call *R* the *ReadConcern* parameter of MongoDB and *W* the *WriteConcern* (which indicate respectively the number of copies it reads and writes, before confirming the operation to the user); give the equation involving those variables that corresponds to the **eventually consistent** configuration.
+9. What is the difference between query cost and query response time ...
     1. in centralized systems?
     2. in distributed systems?
-9. Name the two factors that make impossible having linear scalability according to the Universal Scalability Law.
+10. Name the two factors that make impossible having linear scalability according to the Universal Scalability Law.
     1. —
     2. —
 
