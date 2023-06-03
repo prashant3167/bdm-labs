@@ -83,13 +83,20 @@
     ```
 
     Design-1: authors, books, author & Books (all like relational model)
+
     Design-2: authors, books, authorBooks (all books of each author are nested)
+
     Design-3: authors, books, bookAuthors (all authors of each book are nested)
+
     Design-4: books (has nested list of all authors)
+
     Design-5: authors (has nested list of all books) 
+
     Design-6: authors & books (like relational model)
+
     Design-7: authors & books with books having nested list of authors and authors separately
 
     The choice of best alternative depends on the requirements. 
-    -   Storage space: Design 6 consumes the maximum space as every for m-n relations there are m x n key-value pairs. Design 1 consumes the least space.
-    -   Types of queries: Design 6 is the best for queries as all the entries are stored separately & we can map it. Design 1 is the worst for queries as we need to traverse through 3 storages and apply joins to check for relations.
+    -   **Storage space**: Design 6 consumes the maximum space as every for m-n relations there are m x n key-value pairs. Design 1 consumes the least space.
+    
+    -   **Types of queries**: Design 6 is the best for queries as all the entries are stored separately & we can map it. Design 1 is the worst for queries as we need to traverse through 3 storages and apply joins to check for relations.
