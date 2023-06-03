@@ -1,33 +1,67 @@
 # 02-Distributed Data
 
+> Note: Review required for questions marked with *
+
+
 ## 2.1 Theoretical questions
 
 1. Which kind of database is this according to the distribution of data? 
     
     ![02-Distributed%20Data/image1.jpeg](02-Distributed%20Data/image1.jpeg)
     
-    
+    ***
+
     **Centralized**
     
 2. Explain what is (a) a distributed system, and (b) a parallel system. Compare both of them (i.e., what has one and not the other and vice-versa).
 
-**distributed system contain multiple nodes (communicate through a network), parallel can be in one machine**
+    ***
+
+    **A distributed system contain multiple nodes (communicate through a network), parallel can be in one machine**
 
 4. Which two kinds of schema information contains the Global Conceptual Schema that does not contain the Local Conceptual Schema in the Extended ANSI-SPARC Architecture for DDBMS?
+
+    ***
+
     1. **Fragmentation**
     2. **Allocation**
+
 5. In the context of distributed data management, name the **four big challenges** that need to be carefully considered in the presence of distribution from the tenant/user point of view.
+
+    ***
+
     1. **Data Design**
     2. **Catalogue Management**
     3. **Transaction Management**
     4. **Query Processing**
+
 6. Name the three characteristics of fragmentation that make it correct.
+
+    ***
+
     1. **Complete**
     2. **Disjoint**
     3. **Reconstruct**
-7. Which is the main problem in having replicas, and which is the innovation introduced by some NOSQL tools to solve it.
-    - Problem:
-    - Innovation:
+
+7. *Which is the main problem in having replicas, and which is the innovation introduced by some NOSQL tools to solve it.
+
+    ***
+
+    - Problem: **Consistency**
+
+        The main challenge with data replication across multiple nodes is maintaining consistency. When data is written to one replica, it needs to be propagated to all other replicas. This is relatively straightforward if the write rate is low, but at high write rates, or when network partitions occur, maintaining consistency becomes challenging.
+
+        In the context of the CAP theorem, which states that it is impossible for a distributed data store to simultaneously provide consistency (all nodes see the same data at the same time), availability (every request receives a response about whether it succeeded or failed), and partition tolerance (the system continues to operate despite arbitrary network failures), this problem manifests as a trade-off. That is, systems often have to choose between consistency and availability when partitions occur.
+
+    - Innovation: **Eventual Consistency and Conflict Resolution**
+
+        To address the consistency challenge, many NoSQL systems have adopted an approach called eventual consistency. In an eventually consistent system, replicas are allowed to diverge temporarily, with the expectation that they will eventually become consistent. This approach allows the system to provide high availability and partition tolerance, at the expense of immediate consistency.
+
+        In addition to eventual consistency, NoSQL databases have also introduced mechanisms for conflict resolution. Instead of relying on locks or a single source of truth, these databases allow multiple versions of a record to exist at the same time and provide tools for resolving conflicts. One common approach is last-write-wins, where the most recent write is considered the correct one. However, many databases also support application-defined conflict resolution strategies, allowing developers to specify custom logic for merging divergent records.
+
+        DynamoDB from Amazon is a good example of a NoSQL database that uses these innovations. It adopts eventual consistency and provides conflict resolution mechanisms to ensure distributed robustness.
+
+
 8. Given *N* replicas, let’s call *R* the *ReadConcern* parameter of MongoDB and *W* the *WriteConcern* (which indicate respectively the number of copies it reads and writes, before confirming the operation to the user); give the equation involving those variables that corresponds to the **eventually consistent** configuration.
 9. What is the difference between query cost and query response time ...
     1. in centralized systems?
