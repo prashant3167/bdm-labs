@@ -89,6 +89,10 @@
     
     ![Untitled](02-Distributed%20Data/Untitled.png)
     
+    Kids: Vertical fragmentation. Complete, disjoint, allows reconstruction (by joining by kidId)
+    Toys: Horizontal fragmentation. Complete (if we don’t have null/undefined values), disjoint, allows for reconstruction (by union) if it's complete
+    Requests: Derived horizontal fragmentation. Complete (depends on T1 and T2 characteristics), disjoint, allows for reconstruction (by union) if it's complete
+    
 2.  You are a customer using an e-commerce based on heavy replication (e.g., Amazon):
     1. Show a database replication strategy (e.g., sketch it) where:
         1. You buy an item, but this item does not appear in your basket.
