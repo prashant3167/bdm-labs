@@ -67,8 +67,8 @@
     1. in centralized systems?
     2. in distributed systems?
 10. Name the two factors that make impossible having linear scalability according to the Universal Scalability Law.
-    1. —
-    2. —
+    1. — system’s contention
+    2. — consistency delay
 
 ## 2.2 Problems
 
